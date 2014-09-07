@@ -2,7 +2,8 @@
 #Problem 1
 #row.names is the parameter used in the read.table function that lets you either give it a vector of the row names or the column which contains the row names.
 setwd("C:\\Users\\Richie Howell\\Documents\\R Stuffs and things\\CDMA-R")
-table = read.table(file = "HW1text.txt", header = TRUE)
+table = read.table(file = "HW1text.txt", header = FALSE, skip = 1, col.names=c("a","b","c"))
+?read.table
 #-----------------------------------------------------------
 #Problem 2
 #create the vectors for number 1
