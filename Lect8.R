@@ -77,5 +77,4 @@ ggplot(statef) +
   theme(axis.text.y = element_text(size=rel(0.6))) +
   theme_bw() +
   ggtitle ("Horizontal bar chart with ordered categories")
-  
 
