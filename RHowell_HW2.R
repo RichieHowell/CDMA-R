@@ -40,4 +40,7 @@ dtrain = subset(psub,ORIGRANDGROUP >= 500)
 dtest = subset(psub,ORIGRANDGROUP < 500)
 #2.14, gives us a summary of the cow variable in the dtrain dataset
 summary(dtrain$COW)
-data = read.csv("Produc.csv")
+data = read.csv("cars93.csv")
+summary(data)
+data$Rear.seat.room <- ifelse(is.na(data$Rear.seat.room), -1, data$Rear.seat.room)
+data$Luggage.room <- ifelse(is.na(data$Luggage.room), -1, data$Luggage.room)
