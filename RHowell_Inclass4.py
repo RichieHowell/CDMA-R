@@ -84,12 +84,25 @@ for i in range(0, 6):
 #prints the numbers from 0 to 5 because that is what elements contains
 for i in elements:
     print "Element was: %d" % i
+print elements[0];
 
+#PART I
+
+#Use the code from Lecture14.py to create and change the 
+#'stuff' list; Then comment on each line of the code below
+#what it does, and what the result is
+
+#prints the first element of the stuff list, which is oranges, then prints the -1 element of stuff which is corn, then pops off the last element of the list and prints it, which is corn, then prints a string which is all the data of stuff seperated by spaces, then prints the elemnts 3 to 5 of stuffs seperated by a pound symbol
+print stuff[1]
+print stuff[-1] 
+print stuff.pop()
+print ' '.join(stuff) 
+print '#'.join(stuff[3:5]) 
 #PART II
 
 #Create comments where marked with # to explain the code below
 
-#creates a states list with 5 states' full names as the index matched with their abrreviations  as the data
+#creates a states dictionary with 5 states' full names as the index matched with their abrreviations  as the data
 states = {
     'Oregon': 'OR',
     'Florida': 'FL',
@@ -98,43 +111,43 @@ states = {
     'Michigan': 'MI'
 }
 
-#creates a cities list with the abbreviates of states as the index matched with a large city from the state as the data
+#creates a cities dictionary with the abbreviates of states as the index matched with a large city from the state as the data
 cities = {
     'CA': 'San Francisco',
     'MI': 'Detroit',
     'FL': 'Jacksonville'
 }
 
-#creates 2 new elements in the cities list with the abbreviations of 2 states at the indexes and a big city found in that state as the data
+#creates 2 new elements in the cities dictionary with the abbreviations of 2 states at the indexes and a big city found in that state as the data
 cities['NY'] = 'New York'
 cities['OR'] = 'Portland'
 
-#prints 10 dashes then says a big city of new york and a big city of oregan from the cities list
+#prints 10 dashes then says a big city of new york and a big city of oregan from the cities dictionary
 print '-' * 10
 print "NY State has: ", cities['NY']
 print "OR State has: ", cities['OR']
 
-#prints 10 dashes then tells us the michigan and florida abbreviations from the states list
+#prints 10 dashes then tells us the michigan and florida abbreviations from the states dictionary
 print '-' * 10
 print "Michigan's abbreviation is: ", states['Michigan']
 print "Florida's abbreviation is: ", states['Florida']
 
-#prints 10 dashes then gives us a big city from michigan and florida by passing the data from the states list as the index of the city list
+#prints 10 dashes then gives us a big city from michigan and florida by passing the data from the states dictionary as the index of the city dictionary
 print '-' * 10
 print "Michigan has: ", cities[states['Michigan']]
 print "Florida has: ", cities[states['Florida']]
 
-#prints 10 dahes then prints all the data with their indexes in the states list
+#prints 10 dahes then prints all the data with their indexes in the states dictionary
 print '-' * 10
 for state, abbrev in states.items():
     print "%s is abbreviated %s" % (state, abbrev)
 
-#prints 10 dahes then prints all the data with their indexes in the cities list
+#prints 10 dahes then prints all the data with their indexes in the cities dictionary
 print '-' * 10
 for abbrev, city in cities.items():
     print "%s has the city %s" % (abbrev, city)
 
-#prints 10 dahes then prints all the data in both the lists by printing the index of the state list, then the data of the state list, then the data of the cities list using the data from the states list as an index
+#prints 10 dahes then prints all the data in both the dictionarys by printing the index of the state dictionary, then the data of the state dictionary, then the data of the cities dictionary using the data from the states dictionary as an index
 print '-' * 10
 for state, abbrev in states.items():
     print "%s state is abbreviated %s and has city %s" % (
